@@ -21,8 +21,6 @@ The simulation utilizes the simpy library to model the processes of patient admi
 project/
 ├── notebooks/
 │   └── MonteCarlosimulationFInal.ipynb  # Main analysis and final results
-├── src/
-│   └── simulation_logic.py              # Core logic of the DES (SimPy) and MC loops
 ├── tests/
 │   └── infunferschrittern.ipynb         # Extended scenarios (5-unit steps) for tipping point analysis
 ├── requirements.txt                     # List of dependencies
