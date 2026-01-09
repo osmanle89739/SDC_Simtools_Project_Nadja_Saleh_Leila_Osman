@@ -57,7 +57,7 @@ Die Kapazitäten orientieren sich an realen Werten für den Standort Nürnberg:
 
 1. **Initialisierung:** Das Krankenhaus wird zu 75% mit "Preload"-Patienten gefüllt, um Einschwingeffekte zu minimieren.
 2. **Ankunftsprozess:** Patienten treffen basierend auf einem Poisson-Prozess (Exponentialverteilung der Zwischenankunftszeiten) ein.
-3. **Behandlung:** Falls ein Bett frei ist, wird es belegt. Die Behandlungsdauer ist stochastisch (). Wenn kein Bett frei ist, entsteht eine Wartezeit.
+3. **Behandlung:** Falls ein Bett frei ist, wird es belegt. Die Behandlungsdauer ist stochastisch. Wenn kein Bett frei ist, entsteht eine Wartezeit.
 4. **Auswertung:** Nach 150 Tagen werden die Statistiken für das jeweilige Replikations-Szenario aggregiert.
 
 ### Starten der Simulation
