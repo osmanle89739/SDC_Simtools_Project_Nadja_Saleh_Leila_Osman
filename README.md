@@ -4,7 +4,7 @@ This project simulates occupancy levels and waiting times in hospitals (intensiv
 
 ## Overview
 
-The simulation utilizes the `SimPy` library to model the processes of patient admission, length of stay (LOS), and resource scarcity (bed capacity). Two scenarios are compared: standard operations and a stress test under high-load conditions.
+The simulation utilizes the simpy library to model the processes of patient admission, length of stay (LOS), and resource scarcity (bed capacity). Two scenarios are compared: standard operations and a stress test under high-load conditions.
 
 ### Core Features
 
@@ -90,6 +90,3 @@ The model compares two primary scenarios:
 2. **Stress Test (235 patients/week):** Tests the system at its theoretical capacity limit.
 
 The results are presented in a table comparing the theoretical utilization (rho) against mean waiting times and the corresponding confidence intervals.
-
-
-
