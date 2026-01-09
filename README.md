@@ -4,7 +4,7 @@ This project simulates occupancy levels and waiting times in hospitals (intensiv
 
 ## Overview
 
-The simulation utilizes the simpy library to model the processes of patient admission, length of stay (LOS), and resource scarcity (bed capacity). Two scenarios are compared: standard operations and a stress test under high-load conditions.
+The simulation utilizes the simpy library to model the processes of patient admission, length of stay (LOS), and resource scarcity (bed capacity). 3 scenarios are compared: standard operations and 2 stress test one at the exact tipping point and one scenario under a high-load condition.
 
 ### Core Features
 
@@ -45,8 +45,8 @@ The capacities are based on real-world data for the Nuremberg location:
 
 | Parameter | Value | Description |
 | --- | --- | --- |
-| ICU_BEDS | 51 | Available intensive care beds |
-| NORM_BEDS | 567 | Available general ward beds |
+| ICU_BEDS | 47 | Available intensive care beds for corona patients |
+| NORM_BEDS | 565 | Available general ward beds for corona patients |
 | MEAN_LOS | 14.0 days | Mean Length of Stay |
 | SIM_DURATION | 150 days | Total simulation period |
 | R | 20 | Number of simulation runs (replications) |
