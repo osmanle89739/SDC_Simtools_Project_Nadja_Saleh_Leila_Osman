@@ -47,8 +47,8 @@ The capacities are based on real-world data for the Nuremberg location:
 
 | Parameter | Value | Description |
 | --- | --- | --- |
-| ICU_BEDS | 47 | Available intensive care beds |
-| NORM_BEDS | 400 | Available general ward beds |
+| ICU_BEDS | 51 | Available intensive care beds |
+| NORM_BEDS | 567 | Available general ward beds |
 | MEAN_LOS | 14.0 days | Mean Length of Stay |
 | SIM_DURATION | 150 days | Total simulation period |
 | R | 20 | Number of simulation runs (replications) |
