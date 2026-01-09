@@ -18,14 +18,14 @@ Die Simulation nutzt die Bibliothek `SimPy`, um den Prozess der Patientenaufnahm
 ### Ordnerstruktur 
 
 project/
-
-├── notebooks/      # hier ist das Final Projekt drin
-    └── MonteCarlosimulationFInal.ipynb/      #FinalCode
-├── src/            # simulationen (MC und DES)
-├── tests/          # code 2
-    └──infunferschrittern.ipynb # test-Code mit mehr szenarien um Kipppunkt genauer zu erkennen  
-├── requirements.txt # Liste der Abhängigkeiten (Version-Pinning) 
-└── README.md       # Projektbeschreibung 
+├── notebooks/
+│   └── MonteCarlosimulationFInal.ipynb  # Hauptanalyse und finale Ergebnisse
+├── src/
+│   └── simulation_logic.py              # Kernlogik der DES (SimPy) und MC-Schleifen
+├── tests/
+│   └── infunferschrittern.ipynb         # Erweiterte Szenarien (5er-Schritte) zur Kipppunkt-Suche
+├── requirements.txt                     # Benötigte Python-Bibliotheken
+└── README.md                            # Projektbeschreibung 
 
 ---
 ## 🛠 Technologien
