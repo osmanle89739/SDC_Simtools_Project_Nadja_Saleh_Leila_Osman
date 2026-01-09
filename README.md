@@ -23,7 +23,7 @@ project/
     └── MonteCarlosimulationFInal.ipynb/      #FinalCode
 ├── src/            # simulationen (MC und DES)
 ├── tests/          # code 2
-    └──infunferschrittern.ipynb # Code mit mehr szenarien um Kipppunkt genauer zu erkennen  
+    └──infunferschrittern.ipynb # test-Code mit mehr szenarien um Kipppunkt genauer zu erkennen  
 ├── requirements.txt # Liste der Abhängigkeiten (Version-Pinning) 
 └── README.md       # Projektbeschreibung 
 
