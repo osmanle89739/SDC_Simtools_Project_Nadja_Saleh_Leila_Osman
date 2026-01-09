@@ -1,75 +1,76 @@
-# Krankenhaus-Bettenbelegungssimulation (COVID-19 Nürnberg)
+# Hospital Bed Occupancy Simulation (COVID-19 Nuremberg)
 
-Dieses Projekt simuliert die Auslastung und Wartezeiten in Krankenhäusern (Intensiv- und Normalstationen) in Nürnberg unter Verwendung der **Discrete Event Simulation (DES)**. Ziel ist es, die Auswirkungen unterschiedlicher Patientenaufkommen auf die Wartezeiten und die Systemstabilität zu analysieren.
+This project simulates the occupancy levels and waiting times in hospitals (intensive care units and general wards) in Nuremberg using **Discrete Event Simulation (DES)**. The objective is to analyze the impact of varying patient volumes on waiting times and system stability.
 
-## 📋 Übersicht
+## Overview
 
-Die Simulation nutzt die Bibliothek `SimPy`, um den Prozess der Patientenaufnahme, die Verweildauer (Length of Stay) und die Ressourcenknappheit (Bettenkapazität) abzubilden. Es werden zwei Szenarien verglichen: der Normalbetrieb und ein Stress-Test bei hoher Belastung.
+The simulation utilizes the simpy library to map the processes of patient admission, length of stay (LOS), and resource scarcity (bed capacity). Two scenarios are compared: standard operations and a stress test under high-load conditions.
 
-### Kernfeatures:
+### Core Features:
 
-* **Monte-Carlo-Simulation:** Durchführung von  unabhängigen Replikationen zur Unsicherheitsquantifizierung.
-* **Warm-up Phase:** Vorbelegung der Betten (75% Startkapazität), um einen realistischen "Steady-State" zu erreichen.
-* **Stochastische Prozesse:** Modellierung der Ankünfte und Behandlungsdauer mittels Exponentialverteilungen.
-* **Statistische Auswertung:** Berechnung von Mittelwerten, Standardfehlern, Konfidenzintervallen und 95%-Quantilen der Wartezeiten.
+* **Monte Carlo Simulation:** Execution of independent replications for uncertainty quantification.
+* **Warm-up Phase:** Pre-occupancy of beds (75% initial capacity) to achieve a realistic steady state.
+* **Stochastic Processes:** Modeling of arrivals and treatment durations using exponential distributions.
+* **Statistical Evaluation:** Calculation of mean values, standard errors, confidence intervals, and 95th percentiles of waiting times.
 
 ---
 
-### Ordnerstruktur 
+### Project Structure
 
 project/
 ├── notebooks/
-│   └── MonteCarlosimulationFInal.ipynb  # Hauptanalyse und finale Ergebnisse
+│   └── MonteCarlosimulationFInal.ipynb  # Main analysis and final results
 ├── src/
-│   └── simulation_logic.py              # Kernlogik der DES (SimPy) und MC-Schleifen
+│   └── simulation_logic.py              # Core logic of the DES (SimPy) and MC loops
 ├── tests/
-│   └── infunferschrittern.ipynb         # Erweiterte Szenarien (5er-Schritte) zur Kipppunkt-Suche
-├── requirements.txt                     # Benötigte Python-Bibliotheken
-└── README.md                            # Projektbeschreibung 
+│   └── infunferschrittern.ipynb         # Extended scenarios (steps of 5) for tipping point identification
+├── requirements.txt                     # Required Python libraries
+└── README.md                            # Project description
 
 ---
-## 🛠 Technologien
+
+## Technologies
 
 * **Python 3.x**
-* **SimPy:** Framework für die ereignisorientierte Simulation.
-* **NumPy:** Mathematische Berechnungen und Zufallszahlengenerierung.
-* **Pandas:** Strukturierung und tabellarische Darstellung der Ergebnisse.
+* **SimPy:** Framework for discrete-event simulation.
+* **NumPy:** Mathematical calculations and random number generation.
+* **Pandas:** Data structuring and tabular representation of results.
 
 ---
 
-## ⚙️ Parameter & Konfiguration
+## Parameters & Configuration
 
-Die Kapazitäten orientieren sich an realen Werten für den Standort Nürnberg:
+Capacities are based on real-world data for the Nuremberg location:
 
-| Parameter | Wert | Beschreibung |
+| Parameter | Value | Description |
 | --- | --- | --- |
-| `ICU_BEDS` | 47 | Verfügbare Intensivbetten |
-| `NORM_BEDS` | 400 | Verfügbare Normalbetten |
-| `MEAN_LOS` | 14.0 Tage | Durchschnittliche Liegedauer (Mean Length of Stay) |
-| `SIM_DURATION` | 150 Tage | Gesamter Simulationszeitraum |
-| `R` | 20 | Anzahl der Simulationsläufe (Replikationen) |
+| `ICU_BEDS` | 47 | Available intensive care beds |
+| `NORM_BEDS` | 400 | Available general ward beds |
+| `MEAN_LOS` | 14.0 days | Mean Length of Stay |
+| `SIM_DURATION` | 150 days | Total simulation period |
+| `R` | 20 | Number of simulation runs (replications) |
 
 ---
 
-## 🚀 Durchführung der Simulation
+## Simulation Execution
 
-### Funktionsweise des Modells
+### Model Functionality
 
-1. **Initialisierung:** Das Krankenhaus wird zu 75% mit "Preload"-Patienten gefüllt, um Einschwingeffekte zu minimieren.
-2. **Ankunftsprozess:** Patienten treffen basierend auf einem Poisson-Prozess (Exponentialverteilung der Zwischenankunftszeiten) ein.
-3. **Behandlung:** Falls ein Bett frei ist, wird es belegt. Die Behandlungsdauer ist stochastisch (). Wenn kein Bett frei ist, entsteht eine Wartezeit.
-4. **Auswertung:** Nach 150 Tagen werden die Statistiken für das jeweilige Replikations-Szenario aggregiert.
+1. **Initialization:** The hospital is populated to 75% capacity with "preload" patients to minimize transient effects.
+2. **Arrival Process:** Patients arrive based on a Poisson process (exponential distribution of inter-arrival times).
+3. **Treatment:** If a bed is available, it is occupied. Treatment duration is stochastic. If no bed is available, a waiting period occurs.
+4. **Evaluation:** After 150 days, statistics for the respective replication scenario are aggregated.
 
-### Starten der Simulation
+### Starting the Simulation
 
-Stelle sicher, dass alle Abhängigkeiten installiert sind:
+Ensure all dependencies are installed:
 
 ```bash
 pip install simpy numpy pandas
 
 ```
 
-Führe das Skript aus:
+Execute the script:
 
 ```bash
 python simulation_script.py
@@ -78,18 +79,12 @@ python simulation_script.py
 
 ---
 
-## 📊 Ergebnisse (Szenarien-Vergleich)
+## Results (Scenario Comparison)
 
-Das Modell vergleicht zwei Hauptszenarien:
+The model compares two main scenarios:
 
-1. **Normal (35 Pat./Woche):** Repräsentiert den regulären Betrieb.
-2. **Stress-Test (235 Pat./Woche):** Testet das System am theoretischen Kapazitätslimit.
+1. **Normal (35 patients/week):** Represents regular operations.
+2. **Stress Test (235 patients/week):** Tests the system at its theoretical capacity limit.
 
-Die Ergebnisse werden in einer Tabelle ausgegeben, die die **theoretische Auslastung ()** der mittleren **Wartezeit** und dem **Konfidenzintervall** gegenüberstellt.
-
----
-
-## 📝 Lizenz
-
-Dieses Projekt wurde für akademische Zwecke zur Simulation von Krankenhauskapazitäten entwickelt.
+The results are output in a table comparing the **theoretical utilization ()** with the mean **waiting time** and the **confidence interval**.
 
