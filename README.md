@@ -87,4 +87,4 @@ The model compares two primary scenarios:
 1. **Normal (35 patients/week):** Represents regular operations.
 2. **Stress Test (235 patients/week):** Tests the system at its theoretical capacity limit.
 
-The results are presented in a table comparing the theoretical utilization (rho) against mean waiting times and the corresponding confidence intervals.
+The results are presented in a table consisting of the standard errorand comparing the theoretical utilization (rho) against mean waiting times and the corresponding confidence intervals.
