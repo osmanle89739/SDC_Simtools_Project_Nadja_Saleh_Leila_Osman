@@ -2,7 +2,7 @@
 
 Dieses Projekt simuliert die Auslastung und Wartezeiten in Krankenhäusern (Intensiv- und Normalstationen) in Nürnberg unter Verwendung der **Discrete Event Simulation (DES)**. Ziel ist es, die Auswirkungen unterschiedlicher Patientenaufkommen auf die Wartezeiten und die Systemstabilität zu analysieren.
 
-## 📋 Übersicht
+##  Übersicht
 
 Die Simulation nutzt die Bibliothek `SimPy`, um den Prozess der Patientenaufnahme, die Verweildauer (Length of Stay) und die Ressourcenknappheit (Bettenkapazität) abzubilden. Es werden zwei Szenarien verglichen: der Normalbetrieb und ein Stress-Test bei hoher Belastung.
 
@@ -28,7 +28,7 @@ project/
 └── README.md                            # Projektbeschreibung 
 
 ---
-## 🛠 Technologien
+## Technologien
 
 * **Python 3.x**
 * **SimPy:** Framework für die ereignisorientierte Simulation.
@@ -37,7 +37,7 @@ project/
 
 ---
 
-## ⚙️ Parameter & Konfiguration
+## Parameter & Konfiguration
 
 Die Kapazitäten orientieren sich an realen Werten für den Standort Nürnberg:
 
@@ -51,7 +51,7 @@ Die Kapazitäten orientieren sich an realen Werten für den Standort Nürnberg:
 
 ---
 
-## 🚀 Durchführung der Simulation
+##  Durchführung der Simulation
 
 ### Funktionsweise des Modells
 
@@ -78,7 +78,7 @@ python simulation_script.py
 
 ---
 
-## 📊 Ergebnisse (Szenarien-Vergleich)
+##  Ergebnisse (Szenarien-Vergleich)
 
 Das Modell vergleicht zwei Hauptszenarien:
 
@@ -89,7 +89,7 @@ Die Ergebnisse werden in einer Tabelle ausgegeben, die die **theoretische Auslas
 
 ---
 
-## 📝 Lizenz
+##  Lizenz
 
 Dieses Projekt wurde für akademische Zwecke zur Simulation von Krankenhauskapazitäten entwickelt.
 
